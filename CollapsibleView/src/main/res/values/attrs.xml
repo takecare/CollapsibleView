@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CollapsibleLayout">
+        <attr name="hiddenStateDrawable" format="reference" />
+        <attr name="visibleStateDrawable" format="reference" />
+    </declare-styleable>
+
+</resources>
