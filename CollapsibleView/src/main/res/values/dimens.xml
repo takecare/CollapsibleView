@@ -3,28 +3,4 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-
-    <dimen name="timeformTextSize">15.33sp</dimen>
-    <dimen name="timeformHeaderHeight">42.7dp</dimen>
-    <dimen name="timeformHeaderLogoHeight">76.7dp</dimen>
-    <dimen name="timeformHeaderLogoWidth">16.7dp</dimen>
-    <dimen name="timeformHeaderLogoMarginTopBottom">13dp</dimen>
-    <dimen name="timeformHeaderLogoMarginLeft">10.7dp</dimen>
-    <dimen name="timeformArrowHeight">5.3dp</dimen>
-    <dimen name="timeformArrowWidth">10.7dp</dimen>
-    <dimen name="timeformArrowMarginTopBottom">18.7dp</dimen>
-    <dimen name="timeformArrowMarginRight">10.7dp</dimen>
-    <dimen name="timeformRunnersHeight">159.9dp</dimen>
-    <dimen name="timeformRunnerHeight">53.3dp</dimen>
-    <dimen name="timeformRunnerNoMarginLeft">10.7dp</dimen>
-    <dimen name="timeformRunnerSilkHeight">20.7dp</dimen>
-    <dimen name="timeformRunnerSilkWidth">26dp</dimen>
-    <dimen name="timeformRunnerStarHeight">14dp</dimen>
-    <dimen name="timeformRunnerStarWidth">14dp</dimen>
-    <dimen name="timeformViewTitleMarginTop">14.7dp</dimen>
-    <dimen name="timeformViewTitleMarginBottom">10.7dp</dimen>
-    <dimen name="timeformViewTitleMarginLeft">10.7dp</dimen>
-    <dimen name="timeformViewTextMarginBottom">14.7dp</dimen>
-    <dimen name="timeformViewTextMarginLeftRight">10.7dp</dimen>
-
 </resources>
