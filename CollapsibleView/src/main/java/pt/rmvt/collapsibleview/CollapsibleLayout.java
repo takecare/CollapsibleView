@@ -1,8 +1,3 @@
-/**
- * @date May 30, 2013
- * @author Rui Teixeira, rui.teixeira@blip.pt
- * @copyright Copyright 2013 Betfair. All rights reserved.
- */
 package pt.rmvt.collapsibleview;
 
 import android.annotation.TargetApi;
