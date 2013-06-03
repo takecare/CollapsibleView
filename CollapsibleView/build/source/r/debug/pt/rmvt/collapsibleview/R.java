@@ -8,23 +8,27 @@
 package pt.rmvt.collapsibleview;
 
 public final class R {
-    public static final class anim {
-        public static final int collapsible_hide=0x7f040000;
-        public static final int collapsible_show=0x7f040001;
-    }
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int animationDuration=0x7f010002;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int collapsibleLayoutActionId=0x7f010002;
+        public static final int collapsibleLayoutActionId=0x7f010003;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int collapsibleLayoutContentId=0x7f010004;
+        public static final int collapsibleLayoutContentId=0x7f010005;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int collapsibleLayoutStateIndicatorId=0x7f010003;
+        public static final int collapsibleLayoutStateIndicatorId=0x7f010004;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -35,38 +39,34 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int visibleStateDrawable=0x7f010001;
     }
     public static final class dimen {
-        public static final int activity_horizontal_margin=0x7f050000;
-        public static final int activity_vertical_margin=0x7f050001;
+        public static final int activity_horizontal_margin=0x7f040000;
+        public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000a;
-        public static final int arrow_ImageView=0x7f090003;
-        public static final int collapsible=0x7f090000;
-        public static final int comment_TextView=0x7f090008;
-        public static final int content_LinearLayout=0x7f090002;
-        public static final int header_RelativeLayout=0x7f090001;
-        public static final int info_LinearLayout=0x7f090006;
-        public static final int logo_ImageView=0x7f090004;
-        public static final int runners_ListView=0x7f090005;
-        public static final int textview=0x7f090009;
-        public static final int title_TextView=0x7f090007;
+        public static final int action_settings=0x7f08000a;
+        public static final int arrow_ImageView=0x7f080003;
+        public static final int collapsible=0x7f080000;
+        public static final int comment_TextView=0x7f080008;
+        public static final int content_LinearLayout=0x7f080002;
+        public static final int header_RelativeLayout=0x7f080001;
+        public static final int info_LinearLayout=0x7f080006;
+        public static final int logo_ImageView=0x7f080004;
+        public static final int runners_ListView=0x7f080005;
+        public static final int textview=0x7f080009;
+        public static final int title_TextView=0x7f080007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f070000;
     }
     public static final class string {
-        public static final int action_settings=0x7f060000;
-        public static final int app_name=0x7f060001;
-        public static final int collapsibleLayoutAction=0x7f060002;
-        public static final int collapsibleLayoutContent=0x7f060003;
-        public static final int collapsibleLayoutStateIndicator=0x7f060004;
-        public static final int hello_world=0x7f060005;
+        public static final int action_settings=0x7f050000;
+        public static final int app_name=0x7f050001;
     }
     public static final class style {
         /** 
@@ -77,10 +77,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f070000;
+        public static final int AppBaseTheme=0x7f060000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme=0x7f060001;
     }
     public static final class styleable {
         /** Attributes that can be used with a CollapsibleLayout.
@@ -89,12 +89,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CollapsibleLayout_animationDuration pt.rmvt.collapsibleview:animationDuration}</code></td><td></td></tr>
            <tr><td><code>{@link #CollapsibleLayout_collapsibleLayoutActionId pt.rmvt.collapsibleview:collapsibleLayoutActionId}</code></td><td></td></tr>
            <tr><td><code>{@link #CollapsibleLayout_collapsibleLayoutContentId pt.rmvt.collapsibleview:collapsibleLayoutContentId}</code></td><td></td></tr>
            <tr><td><code>{@link #CollapsibleLayout_collapsibleLayoutStateIndicatorId pt.rmvt.collapsibleview:collapsibleLayoutStateIndicatorId}</code></td><td></td></tr>
            <tr><td><code>{@link #CollapsibleLayout_hiddenStateDrawable pt.rmvt.collapsibleview:hiddenStateDrawable}</code></td><td></td></tr>
            <tr><td><code>{@link #CollapsibleLayout_visibleStateDrawable pt.rmvt.collapsibleview:visibleStateDrawable}</code></td><td></td></tr>
            </table>
+           @see #CollapsibleLayout_animationDuration
            @see #CollapsibleLayout_collapsibleLayoutActionId
            @see #CollapsibleLayout_collapsibleLayoutContentId
            @see #CollapsibleLayout_collapsibleLayoutStateIndicatorId
@@ -103,8 +105,22 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int[] CollapsibleLayout = {
             0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004
+            0x7f010004, 0x7f010005
         };
+        /**
+          <p>This symbol is the offset where the {@link pt.rmvt.collapsibleview.R.attr#animationDuration}
+          attribute's value can be found in the {@link #CollapsibleLayout} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:animationDuration
+        */
+        public static final int CollapsibleLayout_animationDuration = 2;
         /**
           <p>This symbol is the offset where the {@link pt.rmvt.collapsibleview.R.attr#collapsibleLayoutActionId}
           attribute's value can be found in the {@link #CollapsibleLayout} array.
@@ -114,7 +130,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name android:collapsibleLayoutActionId
         */
-        public static final int CollapsibleLayout_collapsibleLayoutActionId = 2;
+        public static final int CollapsibleLayout_collapsibleLayoutActionId = 3;
         /**
           <p>This symbol is the offset where the {@link pt.rmvt.collapsibleview.R.attr#collapsibleLayoutContentId}
           attribute's value can be found in the {@link #CollapsibleLayout} array.
@@ -124,7 +140,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name android:collapsibleLayoutContentId
         */
-        public static final int CollapsibleLayout_collapsibleLayoutContentId = 4;
+        public static final int CollapsibleLayout_collapsibleLayoutContentId = 5;
         /**
           <p>This symbol is the offset where the {@link pt.rmvt.collapsibleview.R.attr#collapsibleLayoutStateIndicatorId}
           attribute's value can be found in the {@link #CollapsibleLayout} array.
@@ -134,7 +150,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name android:collapsibleLayoutStateIndicatorId
         */
-        public static final int CollapsibleLayout_collapsibleLayoutStateIndicatorId = 3;
+        public static final int CollapsibleLayout_collapsibleLayoutStateIndicatorId = 4;
         /**
           <p>This symbol is the offset where the {@link pt.rmvt.collapsibleview.R.attr#hiddenStateDrawable}
           attribute's value can be found in the {@link #CollapsibleLayout} array.

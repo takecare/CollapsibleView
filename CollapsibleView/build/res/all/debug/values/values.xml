@@ -4,6 +4,7 @@
     <declare-styleable name="CollapsibleLayout">
         <attr name="hiddenStateDrawable" format="reference" />
         <attr name="visibleStateDrawable" format="reference" />
+        <attr name="animationDuration" format="integer" />
         <attr name="collapsibleLayoutActionId" format="reference" />
         <attr name="collapsibleLayoutStateIndicatorId" format="reference" />
         <attr name="collapsibleLayoutContentId" format="reference" />

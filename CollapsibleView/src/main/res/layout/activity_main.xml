@@ -56,7 +56,6 @@
 
         <LinearLayout
                 android:id="@+id/content_LinearLayout"
-                android:tag="@string/collapsibleLayoutContent"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
