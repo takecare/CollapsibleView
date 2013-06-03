@@ -1,20 +1,14 @@
 package pt.rmvt.collapsibleview;
 
 import android.view.View;
-import android.view.animation.Animation;
 import android.view.animation.Transformation;
 
 /**
  * Created by rmvt on 6/1/13.
  */
-public class CollapseAnimation extends Animation {
+public class CollapseAnimation extends CollapsibleAnimation {
 
     public static final String LOG_TAG = "CollapseAnimation";
-
-    private static final int FINAL_INTERPOLATED_TIME = 1;
-
-    private View mView;
-    private int mInitialHeight;
 
     public CollapseAnimation(View view) {
         mView = view;

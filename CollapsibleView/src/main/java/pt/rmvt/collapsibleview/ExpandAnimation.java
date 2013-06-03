@@ -2,20 +2,16 @@ package pt.rmvt.collapsibleview;
 
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.LinearLayout;
 
 /**
  * Created by rmvt on 6/1/13.
  */
-public class ExpandAnimation extends Animation {
+public class ExpandAnimation extends CollapsibleAnimation {
 
     public static String LOG_TAG = "ExpandAnimation";
 
-    private static final int FINAL_INTERPOLATED_TIME = 1;
-
-    private View mView;
     private int mFinalHeight;
 
     public ExpandAnimation(View view) {

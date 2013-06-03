@@ -16,12 +16,10 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-
 public class CollapsibleLayout extends LinearLayout {
-
     public static final String LOG_TAG = "CollapsibleLayout";
 
-    private static final int DEFAULT_CONTENT_VISIBILITY = GONE;
+    private static final int DEFAULT_ANIMATION_DURATION = 500;
 
     private boolean isContentHidden = false;
 
@@ -35,9 +33,10 @@ public class CollapsibleLayout extends LinearLayout {
     private Drawable mHiddenState;
     private Drawable mVisibleState;
 
+    private int mAnimationDuration = DEFAULT_ANIMATION_DURATION;
+
     public CollapsibleLayout(Context context) {
         super(context);
-
     }
 
     public CollapsibleLayout(Context context, AttributeSet attrs) {
@@ -53,7 +52,6 @@ public class CollapsibleLayout extends LinearLayout {
         initWithAttrs(attrs);
     }
 
-    //
     private void findViews() {
         if (mActionView == null) {
             mActionView = this.findViewById(mActionViewId);
@@ -88,14 +86,19 @@ public class CollapsibleLayout extends LinearLayout {
             mActionViewId = typedArray.getResourceId(R.styleable.CollapsibleLayout_collapsibleLayoutActionId,-1);
             mContentViewId = typedArray.getResourceId(R.styleable.CollapsibleLayout_collapsibleLayoutContentId,-1);
             mStateIndicatorViewId = typedArray.getResourceId(R.styleable.CollapsibleLayout_collapsibleLayoutStateIndicatorId,-1);
-        } finally {
+
+            mAnimationDuration = typedArray.getResourceId(R.styleable.CollapsibleLayout_animationDuration,-1);
+            if (mAnimationDuration < 0) {
+                mAnimationDuration = DEFAULT_ANIMATION_DURATION;
+            }
+        }
+        finally {
             typedArray.recycle();
         }
 
         return;
     }
 
-    //
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
@@ -103,14 +106,13 @@ public class CollapsibleLayout extends LinearLayout {
         // when all child views have been positioned...
         findViews();
 
+        // this should be optimized somehow...
         mStateIndicatorView.setOnClickListener(actionClickListener);
 
         mActionView.setClickable(true);
         mActionView.setOnClickListener(actionClickListener);
-
     }
 
-    //
     private OnClickListener actionClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -121,11 +123,11 @@ public class CollapsibleLayout extends LinearLayout {
             Animation animation;
 
             if (isContentHidden) {
-                animation = new ExpandAnimation(mContentView,500);
+                animation = new ExpandAnimation(mContentView,mAnimationDuration);
                 mStateIndicatorView.setImageDrawable(mVisibleState);
                 isContentHidden = false;
             } else {
-                animation = new CollapseAnimation(mContentView,500);
+                animation = new CollapseAnimation(mContentView,mAnimationDuration);
                 mStateIndicatorView.setImageDrawable(mHiddenState);
                 isContentHidden = true;
             }
@@ -135,6 +137,12 @@ public class CollapsibleLayout extends LinearLayout {
         }
     };
 
+    // getters & setters
+    public int getAnimationDuration() {
+        return mAnimationDuration;
+    }
 
-
+    public void setAnimationDuration(int duration) {
+        mAnimationDuration = duration;
+    }
 }
