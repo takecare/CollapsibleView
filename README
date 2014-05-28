@@ -1,1 +1,3 @@
-This file was created by Android Studio (I/O Preview) AI-130.692269 for binding GitHub repository
+Simple ViewGroup, extending from LinearLayout, that incorporates an expanding and collapsing animation (on a vertical axis). The layout contains an "action view" which can be clicked to toggle between the collapsed and extended state.
+
+Check the activity_main.xml and MainActivity.java for a working example.
